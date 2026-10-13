@@ -2,7 +2,7 @@ import { ArrowUp, Cloud, Layers } from 'lucide-react';
 import logoImg from '@/assets/agrideep-logo.png';
 
 export function BrandLogo() {
-  return <span className="logo"><img src={logoImg} alt="" aria-hidden="true"/>AgriDeep<span className="text-olive">.</span></span>;
+  return <span className="logo"><img src={logoImg} alt="AgriDeep logo"/>AgriDeep</span>;
 }
 
 export function ProcessArt({ step }: { step: number }) {
