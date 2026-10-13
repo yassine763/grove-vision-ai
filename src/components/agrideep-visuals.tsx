@@ -1,7 +1,8 @@
 import { ArrowUp, Cloud, Layers } from 'lucide-react';
+import logoAsset from '@/assets/agrideep-logo.png.asset.json';
 
 export function BrandLogo() {
-  return <span className="logo"><svg viewBox="0 0 32 36" fill="none" aria-hidden="true"><path d="M6 30C6 15 15 5 27 4C28 16 20 27 6 30Z" stroke="currentColor" strokeWidth="1.5"/><path d="M4 33L23 9M11 25L11 16M16 20L24 18" stroke="currentColor" strokeWidth="1.3"/><path d="M3 16C-1 20 5 29 17 31C25 32 31 29 30 25" stroke="currentColor" strokeWidth="1.2"/></svg>AgriDeep<span className="text-olive">.</span></span>;
+  return <span className="logo"><img src={logoAsset.url} alt="" aria-hidden="true"/>AgriDeep<span className="text-olive">.</span></span>;
 }
 
 export function ProcessArt({ step }: { step: number }) {
