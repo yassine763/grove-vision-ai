@@ -1,16 +1,44 @@
-import { ArrowUpRight, Info } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { ArrowUpRight } from 'lucide-react';
+
+const LINKEDIN_URL = 'https://www.linkedin.com/company/126153957/';
 
 export function ContactSection() {
-  return <section id="contact" className="section"><div className="page-wrap contact-layout"><div><div className="eyebrow section-label"><span className="eyebrow-line"/> LET’S START A CONVERSATION</div><h2>A better perspective starts with you.</h2><p className="contact-copy">Tell us a little about your business and your interest in olive grove monitoring.</p><p className="contact-email">Prefer email? <a href="mailto:partnerships@agrideep.tn">partnerships@agrideep.tn</a></p><p className="contact-note"><Info size={15} className="shrink-0 mt-0.5"/><span>This form is a design preview and is not connected yet. No information is sent or stored.</span></p></div>
-    <form onSubmit={event => event.preventDefault()} aria-label="Conversation request — design preview"><div className="form-grid">
-      <div className="form-field"><label htmlFor="full-name">Full name</label><Input id="full-name" name="fullName" autoComplete="name" placeholder="Your full name" required/></div>
-      <div className="form-field"><label htmlFor="business-email">Business email</label><Input id="business-email" name="email" type="email" autoComplete="email" placeholder="you@company.com" required/></div>
-      <div className="form-field"><label htmlFor="company">Company</label><Input id="company" name="company" autoComplete="organization" placeholder="Company name" required/></div>
-      <div className="form-field"><label htmlFor="role">Role</label><select id="role" name="role" defaultValue="" required><option value="" disabled>Select your role</option>{['Producer','Exporter','Importer','Distributor','Bottler','Other'].map(role => <option key={role}>{role}</option>)}</select></div>
-      <div className="form-field form-full"><label htmlFor="message">Message <span className="text-muted-foreground font-normal">(optional)</span></label><Textarea id="message" name="message" placeholder="What would you like to explore with AgriDeep?"/></div>
-      <div className="form-full"><Button type="submit" variant="pilot" size="cta" disabled>Request a Conversation <ArrowUpRight/></Button><p className="form-footnote">Conversation requests will be available once the form is connected.</p><details className="confirmation-preview"><summary>Preview confirmation message</summary><p><span className="block text-[9px] font-semibold mb-1">DESIGN PREVIEW — NO REQUEST SENT</span>Thank you for your interest in AgriDeep. We'll be in touch to explore whether a conversation or pilot could be useful.</p></details></div>
-    </div></form></div></section>;
+  return (
+    <section id="contact" className="section">
+      <div className="page-wrap contact-layout contact-linkedin">
+        <div>
+          <div className="eyebrow section-label">
+            <span className="eyebrow-line" /> LET'S CONNECT
+          </div>
+          <h2>A better perspective starts with you.</h2>
+          <p className="contact-copy">
+            Follow AgriDeep on LinkedIn to stay updated on our journey and reach out to start a conversation about olive grove monitoring.
+          </p>
+        </div>
+        <div className="linkedin-cta-wrap">
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow AgriDeep on LinkedIn"
+            className="linkedin-card"
+          >
+            <span className="linkedin-logo" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </span>
+            <div className="linkedin-text">
+              <span className="linkedin-label">Follow us on LinkedIn</span>
+              <span className="linkedin-handle">AgriDeep · linkedin.com/company/126153957</span>
+            </div>
+            <ArrowUpRight className="linkedin-arrow" />
+          </a>
+          <p className="contact-email">
+            Prefer email? <a href="mailto:partnerships@agrideep.tn">partnerships@agrideep.tn</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 }

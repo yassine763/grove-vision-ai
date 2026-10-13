@@ -250,3 +250,13 @@ body { font-family: var(--font-sans); margin: 0; -webkit-font-smoothing: antiali
 @media (max-width: 370px) { .hero h1 { font-size: 39px; }.hero-actions { flex-direction: column; align-items: flex-start; }.form-grid { grid-template-columns: 1fr; }.mobile-menu > a { display: none; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }.fade-in { animation: none; } * { transition-duration: 0s !important; } }
 .contact-email { font-size: 12px; line-height: 1.8; margin-top: 18px; }.contact-email a { color: var(--olive); font-weight: 600; text-underline-offset: 3px; }.footer-email a { color: var(--foreground); text-decoration: none; }.footer-email a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.contact-linkedin { align-items: center; }
+.linkedin-cta-wrap { display: flex; flex-direction: column; justify-content: center; }
+.linkedin-card { display: flex; align-items: center; gap: 20px; border: 1px solid var(--border); border-radius: 8px; padding: 26px 28px; background: var(--card); text-decoration: none; color: var(--foreground); transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; box-shadow: var(--panel-shadow); }
+.linkedin-card:hover { border-color: #0a66c2; box-shadow: 0 8px 32px oklch(0.3 0.05 240 / 12%); transform: translateY(-2px); }
+.linkedin-logo { display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 10px; background: #0a66c2; color: #fff; flex-shrink: 0; }
+.linkedin-text { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.linkedin-label { font-size: 15px; font-weight: 600; }
+.linkedin-handle { font-size: 11px; color: var(--muted-foreground); }
+.linkedin-arrow { width: 18px; height: 18px; color: var(--muted-foreground); flex-shrink: 0; transition: color 0.2s, transform 0.2s; }
+.linkedin-card:hover .linkedin-arrow { color: #0a66c2; transform: translate(2px, -2px); }
